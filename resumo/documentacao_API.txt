@@ -1,0 +1,76 @@
+1 Introdução
+
+1.1 Para verificar a versão atual do nodeJs execute no terminal:
+1.1.1 node -V ou node --version
+
+2 Entendendo o packge.json e instalando o Express
+
+2.1 npm - É um gerenciador de pacote do nodejs que pode ser usado
+para instalar o Express como uma dependência do projeto.
+ Todas as informações do seu projeto, estarão salvas no seu packge.json como
+dependências do seu projeto. Há cada projeto novo há um packge.json.
+Todo inicio de um novo projeto deve ser criado um packge.json e, para
+isso, execute o seguinte comando para criação de um packge.json:
+command -> : ( npm init ) que retornará no terminal os seguintes itens:
+
+# version:
+#nome:
+#descripion:
+#arquivo:
+# teste command:
+# git repository:
+#keywords:
+#autor:
+#licence:
+
+Para fazer o dowload e colocar o express como dependência do seu projeto, execute
+o seguinte command -> : npm install express --save. Esse command irá fazer o dowload
+do express e em seguida salvará o mesmo como dependência do seu projeto, no seu arquivo
+packge.json.
+
+3 Nodemon e Criando um servidor web com Express
+
+  3.1 O nodemon é usado para atualizar o servidor em tempo real quando é feito uma alteração 
+  na REST API, sem precisar portanto, ficar parando o servidor a todo momento que for realizado 
+  essa alteração. Para baixar o nodemon e salva-lo como dependência do seu projeto, execute o
+  seguinte command -> : npm install nodemon -g --save. OBS: o -g é para instala-lo de modo global.
+
+4 Carregando rotas com o Consign e baixando modulos
+
+4.1 O consign é utilizado quando há a necessidade de carregar várias rotas dentro de uma pasta,
+afinal de conta, ninguém merece fazer o require de rota por rota. Imagine se houvesse 50 rotas dentro
+de uma pasta? Pensa o quão trabalhoso seria. Por isso que o consign é utilizado, para facilicar nossas
+vidas. Para baixar o consign e salva-lo como dependência do seu projeto execute o seguinte command
+-> : npm install consign --save. instalará o consign e salvará-lo em seu packge.json.
+
+4.2 Instalando o Body-Parser
+
+4.2.1 De modo bem resumido, o modulo body-parser serve para converter os dados vindos do body em json,
+serve para parsear os dados. para baixar esse modulo, execute o seguinte command -> : npm install body-parser --save
+
+5 Persistência de dados com NeDB banco de dados javascript
+
+5.2.1 Banco de arquivo em formato json javascript, para baixa-lo execute o seguinte command -> : npm install NeDB --save.
+
+5.1.2 Validando dados recebidos via POST
+5. para validação de dados do nosso banco de dados NeDB, é utilizado o express-validator portanto,
+ execute o seguinte command -> : npm install epxress-validator --save
+
+
+6 Começando o projeto com express-generator
+
+Para começar um novo projeto, utilize o express-generator. O express-generator gera as pastas principais do epxress
+é um verdadeiro bolilerplate.
+Passo a passo:
+
+passo -> 1 : criar uma pasta e acesar essa pasta via terminal
+passo -> 2 : execute,npm install epxress-generator -g
+passo -> 3 : epxress - H vai abrir um terminal
+passo -> 4 :  epxress --ejs -> nome da pasta ex: Client-server
+passo -> 5 : npm install. Instalará todas as dependência necesárias da pasta do projeto que acabou de ser criada.
+
+7 Usando Restfy para acessar REST API
+
+O restfy é um framework escrito em nodeJs muito robusto. Com ele aprenderemos a consumir uma API REST.
+na pasta client-server execute o seguinte command -> : npm install restfy-clients --save.
+
